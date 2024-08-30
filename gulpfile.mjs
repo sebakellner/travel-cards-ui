@@ -10,7 +10,7 @@ import browserSync from "browser-sync";
 const bs = browserSync.create();
 
 const paths = {
-  src: "src/templates/index.html",
+  src: "src/templates/index.njk",
   dest: "dist/",
 };
 
