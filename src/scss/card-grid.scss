@@ -1,0 +1,121 @@
+.card-grid--clickeable {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  border-radius: 8px;
+  max-width: 425px;
+}
+
+.card-grid--clickeable:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-grid {
+  background-color: #fff;
+  color: var(--global-palette4);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  gap: 16px;
+  padding: 0 0 24px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-grid-travel__content {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-grid-travel__list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.card-grid-travel__content-title {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.card-grid-travel__price-title--currency {
+  font-size: 20px;
+}
+
+.card-grid-travel__content-description {
+  font-size: 14px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-grid-travel__price {
+  border-left: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  padding: 0 24px;
+  flex: 1;
+}
+
+.card-grid-travel__divider {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+}
+
+.card-grid-travel__price-person {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.card-grid-travel__price-title {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.card-grid-travel__price-span {
+  font-size: 12px;
+}
+
+.card-grid-travel__list-items--item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.card-grid-travel__price-button {
+  background: #ca69fd;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .card-grid--clickeable {
+    max-width: 100%;
+  }
+}
