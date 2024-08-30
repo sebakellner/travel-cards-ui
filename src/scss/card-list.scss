@@ -16,7 +16,7 @@
 }
 
 .card-list-travel {
-  color: var(--global-palette4);
+  color: var(--global-palette5);
   background-color: #fff;
   border-radius: 8px;
   border: 1px solid #eee;
@@ -51,13 +51,16 @@
 }
 
 .card-list-travel__content-title {
-  font-size: 28px;
+  color: var(--global-palette4);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
 }
 
 .card-list-travel__list-items {
   display: flex;
   flex-direction: column;
-  font-size: 12px;
+  font-size: 14px;
   gap: 12px;
   list-style: none;
   padding: 0;
@@ -91,8 +94,10 @@
 }
 
 .card-list-travel__price-title {
+  color: var(--global-palette4);
   font-size: 32px;
   font-weight: 500;
+  line-height: 1;
 }
 
 .card-list-travel__price-title--currency {

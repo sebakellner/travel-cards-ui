@@ -17,7 +17,7 @@
 
 .card-grid {
   background-color: #fff;
-  color: var(--global-palette4);
+  color: var(--global-palette5);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -41,7 +41,9 @@
 
     .card-grid-travel__content-title {
       font-size: 24px;
+      font-weight: 500;
       line-height: 1;
+      color: var(--global-palette4);
     }
 
     .card-grid-travel__list-items {
@@ -61,10 +63,6 @@
         img {
           width: 16px;
           height: 16px;
-        }
-
-        span {
-          font-size: 12px;
         }
       }
     }
@@ -106,6 +104,7 @@
         gap: 8px;
 
         .card-grid-travel__price-title {
+          color: var(--global-palette4);
           font-size: 32px;
           font-weight: 500;
 
