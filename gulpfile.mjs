@@ -12,6 +12,10 @@ const bs = browserSync.create();
 const paths = {
   src: "src/templates/index.njk",
   dest: "dist/",
+  images: {
+    src: "src/images/**/*",
+    dest: "dist/images/",
+  },
 };
 
 function templates() {
@@ -41,12 +45,26 @@ const compileSass = () => {
     .pipe(gulp.dest("./dist/css"));
 };
 
+function copyImages() {
+  return gulp
+    .src(paths.images.src, { encoding: false })
+    .pipe(gulp.dest(paths.images.dest))
+    .pipe(bs.stream());
+}
+
 const watchFiles = () => {
   gulp.watch("./src/scss/**/*.scss", compileSass);
-  gulp.watch("src/templates/index.html", templates);
-  gulp.watch("src/templates/**/*.html", templates);
+  gulp.watch("src/templates/index.njk", templates);
+  gulp.watch("src/templates/**/*.njk", templates);
+  gulp.watch(paths.images.src, copyImages);
 };
 
-export { compileSass, watchFiles };
+export { compileSass, copyImages, watchFiles };
 
-export default gulp.series(cleanDist, templates, compileSass, watchFiles);
+export default gulp.series(
+  cleanDist,
+  templates,
+  compileSass,
+  copyImages,
+  watchFiles
+);
