@@ -1,35 +1,36 @@
 @import "button";
+@import "variables";
 
 .card-list-travel--clickeable {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
   transition: box-shadow 0.3s ease-in-out;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 $spacing-4 $spacing-8 rgba(0, 0, 0, 0.1);
   display: flex;
-  border-radius: 8px;
+  border-radius: $border-radius-small;
   max-width: 1140px;
 }
 
 .card-list-travel--clickeable:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 $spacing-8 $spacing-16 rgba(0, 0, 0, 0.2);
 }
 
 .card-list-travel {
   color: var(--global-palette5);
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: $border-radius-small;
   border: 1px solid #eee;
   display: flex;
   flex-direction: row;
-  font-size: 16px;
-  gap: 24px;
+  font-size: $font-size-medium;
+  gap: $spacing-24;
   width: 100%;
-  padding-left: 24px;
+  padding-left: $spacing-24;
 }
 
 .card-list-travel__thumbnail-container {
-  padding: 24px 0;
+  padding: $spacing-24 0;
   width: 100%;
   max-width: 336px;
   display: flex;
@@ -46,13 +47,13 @@
 .card-list-travel__content {
   display: flex;
   flex-direction: column;
-  padding: 24px 0;
-  gap: 16px;
+  padding: $spacing-24 0;
+  gap: $spacing-16;
 }
 
 .card-list-travel__content-title {
   color: var(--global-palette4);
-  font-size: 24px;
+  font-size: $font-size-large;
   font-weight: 500;
   line-height: 1;
 }
@@ -60,8 +61,8 @@
 .card-list-travel__list-items {
   display: flex;
   flex-direction: column;
-  font-size: 14px;
-  gap: 12px;
+  font-size: $font-size-medium;
+  gap: $spacing-12;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -69,12 +70,12 @@
 
 .card-list-travel__list-items--item {
   display: flex;
-  gap: 8px;
+  gap: $spacing-8;
   align-items: center;
 }
 
 .card-list-travel__content-description {
-  font-size: 14px;
+  font-size: $font-size-medium;
   line-height: 1.5;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -87,25 +88,25 @@
   border-left: 1px solid #eee;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: $spacing-24;
   justify-content: center;
-  padding: 0 48px;
+  padding: 0 $spacing-48;
   flex: 1;
 }
 
 .card-list-travel__price-title {
   color: var(--global-palette4);
-  font-size: 32px;
+  font-size: $font-size-extra-large;
   font-weight: 500;
   line-height: 1;
 }
 
 .card-list-travel__price-title--currency {
-  font-size: 20px;
+  font-size: $font-size-currency;
 }
 
 .card-list-travel__price-span {
-  font-size: 12px;
+  font-size: $font-size-small;
 }
 
 .card-list-travel__price-button {
@@ -118,7 +119,7 @@
 
 @media (max-width: 1024px) {
   .card-list-travel {
-    gap: 16px;
+    gap: $spacing-16;
   }
 
   .card-list-travel__thumbnail-container {
@@ -126,29 +127,29 @@
   }
 
   .card-list-travel__content {
-    gap: 8px;
+    gap: $spacing-8;
   }
 
   .card-list-travel__content-title {
-    font-size: 24px;
+    font-size: $font-size-large;
   }
 
   .card-list-travel__content-description {
-    font-size: 12px;
+    font-size: $font-size-small;
   }
 
   .card-list-travel__price {
-    padding: 0 32px;
+    padding: 0 $spacing-32;
   }
 }
 
 @media (max-width: 768px) {
   .card-list-travel {
-    padding-left: 16px;
+    padding-left: $spacing-16;
   }
 
   .card-list-travel__thumbnail-container {
-    padding: 16px 0;
+    padding: $spacing-16 0;
   }
 
   .card-list-travel__thumbnail {
@@ -156,33 +157,33 @@
   }
 
   .card-list-travel__price {
-    padding: 0 16px;
-    gap: 16px;
+    padding: 0 $spacing-16;
+    gap: $spacing-16;
   }
 
   .card-list-travel__price-button {
-    font-size: 12px;
+    font-size: $font-size-small;
   }
 
   .card-list-travel__content-title {
-    font-size: 20px;
+    font-size: $font-size-medium;
   }
 
   .card-list-travel__list-items {
-    gap: 4px;
+    gap: $spacing-4;
   }
 }
 
 @media (max-width: 600px) {
   .card-list-travel {
     flex-direction: column;
-    padding: 0 0 24px;
+    padding: 0 0 $spacing-24;
     overflow: hidden;
     border: none;
   }
 
   .card-list-travel__price {
-    padding: 0 24px;
+    padding: 0 $spacing-24;
     border-left: none;
   }
 
@@ -200,29 +201,29 @@
   .card-list-travel__price-person {
     display: flex;
     align-items: baseline;
-    gap: 8px;
+    gap: $spacing-8;
   }
 
   .card-list-travel__price-button {
-    font-size: 16px;
+    font-size: $font-size-medium;
   }
 
   .card-list-travel__content {
-    padding: 0 24px;
-    gap: 16px;
+    padding: 0 $spacing-24;
+    gap: $spacing-16;
   }
 
   .card-list-travel__content-title {
-    font-size: 24px;
+    font-size: $font-size-large;
   }
 
   .card-list-travel__list-items {
-    gap: 12px;
-    font-size: 14px;
+    gap: $spacing-12;
+    font-size: $font-size-medium;
   }
 
   .card-list-travel__content-description {
-    font-size: 14px;
+    font-size: $font-size-medium;
   }
 
   .card-list-travel__thumbnail {

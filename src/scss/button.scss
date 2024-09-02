@@ -1,6 +1,6 @@
 .button {
   &__base {
-    background: #ca69fd;
+    background: var(--global-palette2);
     border-radius: 4px;
     color: #fff;
     font-size: 16px;

@@ -1,4 +1,5 @@
 @import "button";
+@import "variables";
 
 .card-grid--clickeable {
   text-decoration: none;
@@ -7,7 +8,7 @@
   transition: box-shadow 0.3s ease-in-out;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
-  border-radius: 8px;
+  border-radius: $border-radius-small;
   max-width: 425px;
 
   &:hover {
@@ -18,29 +19,29 @@
 .card-grid {
   background-color: #fff;
   color: var(--global-palette5);
-  border-radius: 8px;
+  border-radius: $border-radius-small;
   display: flex;
   flex-direction: column;
-  font-size: 12px;
-  gap: 16px;
-  padding: 0 0 24px;
+  font-size: $font-size-small;
+  gap: $spacing-16;
+  padding: 0 0 $spacing-24;
   width: 100%;
   overflow: hidden;
 
   .card-grid-travel__thumbnail {
     width: 100%;
-    border-radius: 8px 8px 0 0;
+    border-radius: $border-radius-large;
     object-fit: cover;
   }
 
   .card-grid-travel__content {
-    padding: 4px 24px 0;
+    padding: $spacing-4 $spacing-24 0;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: $spacing-16;
 
     .card-grid-travel__content-title {
-      font-size: 24px;
+      font-size: $font-size-large;
       font-weight: 500;
       line-height: 1;
       color: var(--global-palette4);
@@ -49,16 +50,16 @@
     .card-grid-travel__list-items {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: $spacing-12;
       padding: 0;
       margin: 0;
       list-style: none;
 
       .card-grid-travel__list-items--item {
         display: flex;
-        gap: 8px;
+        gap: $spacing-8;
         align-items: center;
-        font-size: 14px;
+        font-size: $font-size-medium;
 
         img {
           width: 16px;
@@ -68,7 +69,7 @@
     }
 
     .card-grid-travel__content-description {
-      font-size: 14px;
+      font-size: $font-size-medium;
       line-height: 1.5;
       display: -webkit-box;
       -webkit-line-clamp: 3;
@@ -89,9 +90,9 @@
     border-left: 1px solid #eee;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: $spacing-16;
     justify-content: center;
-    padding: 0 24px;
+    padding: 0 $spacing-24;
     flex: 1;
 
     .card-grid-travel__price-content {
@@ -101,20 +102,20 @@
       .card-grid-travel__price-person {
         display: flex;
         align-items: baseline;
-        gap: 8px;
+        gap: $spacing-8;
 
         .card-grid-travel__price-title {
           color: var(--global-palette4);
-          font-size: 32px;
+          font-size: $font-size-extra-large;
           font-weight: 500;
 
           .card-grid-travel__price-title--currency {
-            font-size: 20px;
+            font-size: $font-size-currency;
           }
         }
 
         .card-grid-travel__price-span {
-          font-size: 12px;
+          font-size: $font-size-small;
         }
       }
     }
