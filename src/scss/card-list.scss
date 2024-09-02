@@ -47,6 +47,7 @@
 .card-list-travel__content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: $spacing-24 0;
   gap: $spacing-16;
 }
@@ -64,7 +65,7 @@
 .card-list-travel__list-items {
   display: flex;
   flex-direction: column;
-  font-size: $font-size-medium;
+  font-size: $font-size-small;
   gap: $spacing-12;
   list-style: none;
   padding: 0;
@@ -78,7 +79,7 @@
 }
 
 .card-list-travel__content-description {
-  font-size: $font-size-medium;
+  font-size: $font-size-small;
   line-height: 1.5;
   display: -webkit-box;
   -webkit-line-clamp: 3;

@@ -1,46 +1,71 @@
 @import "button";
 @import "variables";
 
-.card-grid--clickeable {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease-in-out;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
-  display: flex;
-  border-radius: $border-radius-small;
-  max-width: 360px;
-
-  &:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
-  }
-}
-
-.card-grid {
+.card-price {
   background-color: #fff;
   color: var(--global-palette5);
   border-radius: $border-radius-small;
   display: flex;
   flex-direction: column;
+  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
   font-size: $font-size-small;
   gap: $spacing-16;
-  padding: 0 0 $spacing-24;
+  padding: $spacing-24 0 $spacing-24;
   width: 100%;
-  overflow: hidden;
+  max-width: 360px;
 
-  .card-grid-travel__thumbnail {
-    width: 100%;
-    border-radius: $border-radius-large;
-    object-fit: cover;
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
   }
 
-  .card-grid-travel__content {
+  @media (max-width: 600px) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    width: 100%;
+    box-shadow: 1px -2px 6px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .card-price__toggle-button {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px 8px 0 0;
+    padding: 8px 16px 0px;
+    gap: 12px;
+    top: -24px;
+    left: 50%;
+    background: #fff;
+    box-shadow: -2px -4px 3px rgba(0, 0, 0, 0.1) !important;
+    transform: translateX(-50%);
+    cursor: pointer;
+
+    span {
+      color: var(--global-palette4);
+    }
+
+    .card-price__toggle-button--arrow {
+      transition: transform 0.3s ease;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .card-price-travel__content {
     padding: $spacing-4 $spacing-24 0;
     display: flex;
     flex-direction: column;
     gap: $spacing-16;
 
-    .card-grid-travel__content-title {
+    @media (max-width: 600px) {
+      display: none;
+    }
+
+    .card-price-travel__content-title {
       font-size: $font-size-large;
       font-weight: 500;
       text-transform: none;
@@ -50,7 +75,7 @@
       margin: 0;
     }
 
-    .card-grid-travel__list-items {
+    .card-price-travel__list-items {
       display: flex;
       flex-direction: column;
       gap: $spacing-12;
@@ -58,7 +83,7 @@
       margin: 0;
       list-style: none;
 
-      .card-grid-travel__list-items--item {
+      .card-price-travel__list-items--item {
         display: flex;
         gap: $spacing-8;
         align-items: center;
@@ -71,27 +96,25 @@
       }
     }
 
-    .card-grid-travel__content-description {
+    .card-price-travel__content-description {
       font-size: $font-size-small;
       line-height: 1.5;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
       padding: 0;
       margin: 0;
     }
   }
 
-  .card-grid-travel__divider {
+  .card-price-travel__divider {
     display: block;
     width: 100%;
     height: 1px;
     background-color: #eee;
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 
-  .card-grid-travel__price {
+  .card-price-travel__price {
     border-left: 1px solid #eee;
     display: flex;
     flex-direction: column;
@@ -100,16 +123,16 @@
     padding: 0 $spacing-24;
     flex: 1;
 
-    .card-grid-travel__price-content {
+    .card-price-travel__price-content {
       display: flex;
       flex-direction: column;
 
-      .card-grid-travel__price-person {
+      .card-price-travel__price-person {
         display: flex;
         align-items: baseline;
         gap: $spacing-8;
 
-        .card-grid-travel__price-title {
+        .card-price-travel__price-title {
           color: var(--global-palette4);
           font-size: $font-size-extra-large;
           font-weight: 500;
@@ -120,27 +143,32 @@
             font-size: $font-size-sm;
           }
 
-          .card-grid-travel__price-title--currency {
+          .card-price-travel__price-title--currency {
             font-size: $font-size-currency;
             padding: 0;
             margin: 0;
           }
         }
 
-        .card-grid-travel__price-span {
+        .card-price-travel__price-span {
           font-size: $font-size-small;
         }
       }
     }
 
-    .card-grid-travel__price-button {
+    .card-price-travel__price-button {
       @extend .button__base;
     }
   }
 }
 
 @media (max-width: 600px) {
-  .card-grid--clickeable {
+  .card-price--clickeable {
     max-width: 100%;
   }
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
 }
