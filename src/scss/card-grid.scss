@@ -109,6 +109,10 @@
           font-size: $font-size-extra-large;
           font-weight: 500;
 
+          @media (max-width: 600px) {
+            font-size: $font-size-sm;
+          }
+
           .card-grid-travel__price-title--currency {
             font-size: $font-size-currency;
           }

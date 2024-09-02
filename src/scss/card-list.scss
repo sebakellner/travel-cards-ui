@@ -156,6 +156,10 @@
     object-fit: cover;
   }
 
+  .card-list-travel__price-title {
+    font-size: $font-size-sm;
+  }
+
   .card-list-travel__price {
     padding: 0 $spacing-16;
     gap: $spacing-16;
