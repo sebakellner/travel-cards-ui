@@ -19,3 +19,6 @@ Este repositorio contiene un proyecto de interfaz de usuario (UI) enfocado en la
    ```bash
    git clone https://github.com/tu-usuario/tu-repositorio.git
    cd tu-repositorio
+## Examples
+![image](https://github.com/user-attachments/assets/01bf54ea-f25f-43eb-8e1c-ce6f3e64d153)
+![image](https://github.com/user-attachments/assets/dab5f337-5f39-47b3-9c08-9f0abe587331)
