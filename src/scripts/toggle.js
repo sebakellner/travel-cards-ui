@@ -7,12 +7,19 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   const toggleText = toggleButton.querySelector("span");
 
-  content.style.height = "0";
-  content.style.overflow = "hidden";
-  toggleText.textContent = "Mostrar precio";
-  chevronIcon.classList.add("rotate");
-  priceContainer.style.gap = "0";
+  if (!toggleButton || !content || !priceContainer || !chevronIcon) {
+    return;
+  }
+
   let isExpanded = false;
+
+  if (window.innerWidth <= 1024) {
+    content.style.height = "0";
+    content.style.overflow = "hidden";
+    toggleText.textContent = "Mostrar precio";
+    chevronIcon.classList.add("rotate");
+    priceContainer.style.gap = "0";
+  }
 
   toggleButton.addEventListener("click", function () {
     if (isExpanded) {
